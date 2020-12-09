@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
 
     <!-- ----------------------------------------------- DIGANTI JUDUL ----------------------------------------------- -->
-    <title>Introduction - Nightmare</title>
+    <title>Footprinting</title>
     <!-- ----------------------------------------------# DIGANTI JUDUL #---------------------------------------------- -->
 
 
@@ -15,11 +15,11 @@
 
 
 
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <!-- <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description"
         content="Nightmare: an intro to binary exploitation / reverse engineering course based around CTF challenges.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" /> -->
 
 
     <link rel="icon" href="../favicon.svg">
@@ -108,7 +108,8 @@
         <div class="sidebar-scrollbox">
             <ol class="chapter">
                 <!-- -------------------- KENALAN -------------------- -->
-                <li class="chapter-item expanded affix "><a href="../index.html"><strong aria-hidden="true">Kenalan</strong></a></li>
+                <li class="chapter-item expanded affix "><a href="../index.html"><strong
+                            aria-hidden="true">Kenalan</strong></a></li>
                 <!-- -------------------- KULIAH -------------------- -->
                 <li class="chapter-item expanded ">
                     <a href="../00-intro/index.html">
@@ -272,7 +273,7 @@
 
                 </div>
                 <!-- ----------------------------------------------- DIGANTI MENU TITLE ----------------------------------------------- -->
-                <h1 class="menu-title">Mata Kuliah</h1>
+                <h1 class="menu-title">Footprinting</h1>
                 <!-- ----------------------------------------------# DIGANTI MENU TITLE #---------------------------------------------- -->
 
                 <div class="right-buttons">
@@ -313,8 +314,145 @@
             <div id="content" class="content">
                 <main>
                     <!-- ----------------------------------------------- DIGANTI MENU ----------------------------------------------- -->
-                    <h1><a class="header" href="#intro" id="intro">Intro</a></h1>
-                    <p>Ayok yang ingin belajar materi perkuliahan...</p>
+                    <p></p>
+                    <ul style="text-align: left;">
+                        <li>Pengertian</li>
+                        <li>Tujuan</li>
+                        <li>Teknik&nbsp;</li>
+                        <li>Tipe footprinting</li>
+                        <li>Lingkungan yang memadai&nbsp; <br /></li>
+                        <li>Perangkat yang digunakan&nbsp;</li>
+                        <li>Pertanyaan penting&nbsp;</li>
+                        <li>Contoh informasi yang harus dikumpulkan</li>
+                    </ul>
+                    <div>
+                        <div>
+                            <p></p>
+                            <hr style="margin-left: 0px; text-align: left; width: 50%;" />
+                            <ul style="text-align: left;">
+                                <li>Nmap<br /></li>
+                            </ul>
+                            <hr />Pengertian :<br />
+                            <p></p>
+                            <p style="margin-left: 40px; text-align: left;">Footprinting (juga dikenal sebagai
+                                pengintaian) adalah teknik yang digunakan untuk mengumpulkan informasi tentang sistem
+                                komputer dan entitas tempat mereka berada. Untuk mendapatkan informasi ini, seorang
+                                peretas mungkin menggunakan berbagai alat dan teknologi. Informasi ini sangat berguna
+                                bagi peretas yang mencoba meretas seluruh sistem </p>
+                            <p style="text-align: justify;">&nbsp;Tujuan :</p>
+                            <p style="margin-left: 40px; text-align: left;">Ini memungkinkan seorang peretas mendapatkan
+                                informasi tentang sistem atau jaringan target. Informasi ini dapat digunakan untuk
+                                melakukan serangan terhadap sistem. Itulah alasan yang mungkin dinamai Pre-Attack,
+                                karena semua informasi ditinjau untuk mendapatkan penyelesaian serangan yang lengkap dan
+                                berhasil. <b>Footprinting juga digunakan oleh peretas etis dan penguji penetrasi untuk
+                                    menemukan kelemahan dan kerentanan keamanan dalam jaringan perusahaan mereka sendiri
+                                    sebelum peretas jahat menemukannya</b>.</p>
+                            <p style="text-align: left;">Teknik :</p>
+                            <ul style="text-align: left;">
+                                <li>DNS queries</li>
+                                <li>Network enumeration</li>
+                                <li>Network queries</li>
+                                <li>Operating system identification</li>
+                                <li>Organizational queries</li>
+                                <li>Ping sweeps</li>
+                                <li>Point of contact queries</li>
+                                <li>Port Scanning</li>
+                                <li>Registrar queries (WHOIS queries)</li>
+                                <li>SNMP queries</li>
+                                <li>World Wide Web spidering</li>
+                                <li>((net work edit)) wifi </li>
+                            </ul>
+                            <p>Tipe Footprinting</p>
+                            <ul style="text-align: left;">
+                                <li>Active Footprinting<br /> Active Footprinting adalah proses menggunakan alat dan
+                                    teknik, seperti melakukan ping sweep atau menggunakan perintah traceroute, untuk
+                                    mengumpulkan informasi tentang target. Jejak Kaki Aktif dapat memicu Sistem Deteksi
+                                    Intrusi (IDS) target dan dapat dicatat, dan karenanya membutuhkan tingkat penyamaran
+                                    agar berhasil.&nbsp; <br /></li>
+                            </ul>
+                            <ul style="text-align: left;">
+                                <li>Passive Footprinting<br />Passive Footprinting adalah proses mengumpulkan informasi
+                                    tentang target dengan cara yang tidak berbahaya, atau pasif. Menjelajahi situs web
+                                    target, mengunjungi profil media sosial karyawan, mencari situs web di WHOIS, dan
+                                    melakukan pencarian Google dari target adalah semua cara Passive Footprinting.
+                                    Passive Footprinting adalah metode yang lebih tersembunyi karena tidak akan memicu
+                                    IDS target atau mengingatkan target informasi yang sedang dikumpulkan. <br /></li>
+                            </ul>
+                            <p>&nbsp;Lingkungan yang memadai :<br /></p>
+                            <ul style="text-align: left;">
+                                <li>Prosedur pengelolaan patch yang efektif.</li>
+                                <li>Kebijakan pengetesan konfigurasi sistem terkelola.</li>
+                                <li>Multi-layered DMZs.</li>
+                                <li>Pengelolaan log keamanan terpusat.</li>
+                                <li>Kontrol keamanan berbasis host.</li>
+                                <li>Deteksi intrusi jaringan atau sistem pencegahan.</li>
+                                <li>Deteksi intrusi nirkabel atau sistem pencegahan.</li>
+                                <li>Sistem deteksi intrusi atau pencegahan aplikasi web.</li>
+                                <li>Keamanan pengguna akhir, keamanan eksekutif, dan insider threat<br /></li>
+                            </ul>
+                            <p>Pertanyaan penting :<br /></p>
+                            <ul style="text-align: left;">
+                                <li>Siapa yang berwenang memberikan ijin pengujian?</li>
+                                <li>Apa tujuan dari pengujian?</li>
+                                <li>Berapa jangka waktu yang diusulkan untuk pengujian Adakah batasan kapan pengujian
+                                    bisa dilakukan?</li>
+                                <li>Apakah klien anda memahami perbedaan antara evaluasi kerentanan dengan pengujian
+                                    penetrasi?</li>
+                                <li>Apakah anda akan melakukan pengujian dengan, atau tanpa kerja sama dengan tim
+                                    operasional keamanan TI? Apakah anda menguji keefektifannya?</li>
+                                <li>Apakah rekayasa sosial diizinkan? Bagaimana dengan serangan denial-of-service?</li>
+                                <li>Apakah anda dapat menguji tindakan pengamanan fisik yang digunakan untuk mengamankan
+                                    server, sangat penting penyimpanan data, atau hal lain yang membutuhkan akses fisik?
+                                    Sebagai contoh, menguji akses masuk / pintu, meniru karyawan untuk masuk ke gedung,
+                                    atau hanya berjalan ke area bagi orang umum.</li>
+                                <li>Apakah anda diperbolehkan untuk melihat dokumentasi jaringan atau diberitahu tentang
+                                    arsitektur jaringan sebelum pengujian untuk mempercepat semuanya? (Belum tentu
+                                    disarankan, karena hal ini dapat menimbulkan keraguan tentang nilai temuan anda.
+                                    Sebagian besar perusahaan / institusi tidak berharap ini menjadi informasi yang
+                                    mudah untuk ditemukan anda).</li>
+                                <li>Berapa rentang IP yang diizinkan untuk diuji? Ada hukum terhadap sistem pemindaian
+                                    dan pengujian tanpa izin yang benar. Berhati-hatilah saat memastikan bahwa perangkat
+                                    dan rentang ini sebenarnya milik klien anda, atau anda mungkin dalam bahaya
+                                    menghadapi konsekuensi hukum.</li>
+                                <li>Dimana lokasi fisik perusahaan? Ini lebih berharga bagi anda penguji jika rekayasa
+                                    sosial diizinkan karena ini memastikan anda berada di gedung yang disetujui saat
+                                    melakukan pengujian. Jika waktu memungkinkan, anda harus memberitahu klien anda
+                                    apakah anda dapat mengakses informasi ini secara publik dalam kasus mereka mempunyai
+                                    kesan bahwa lokasi mereka adalah rahasia atau sulit untuk ditemukan.</li>
+                                <li>Apa yang harus dilakukan jika ada masalah atau jika tujuan awal pengujian telah
+                                    dilakukan dan tercapai? Akankah anda terus menguji untuk menemukan lebih banyak
+                                    entri, atau pengujian selesai? Bagian ini sangat penting dan terkait dengan
+                                    pertanyaan mengapa klien menginginkan sebuah pengujian penetrasi.</li>
+                                <li>Adakah implikasi hukum yang perlu anda sadari, seperti sistem yang berada di negara
+                                    yang berbeda dan sebagainya? Tidak semua negara memiliki hal yang sama hukum dalam
+                                    hal pengujian penetrasi.</li>
+                                <li>Akan ada izin tambahan setelah kerentanan terjadi dieksploitasi? Hal ini penting
+                                    saat melakukan pengujian pada jaringan tersegmentasi. Klien mungkin tidak sadar
+                                    bahwa anda bisa menggunakan sistem internal sebagai kanal untuk menggali lebih dalam
+                                    jaringan mereka.</li>
+                                <li>Bagaimana database ditangani? Apakah anda diperbolehkan menambahkan catatan,
+                                    pengguna, dan seterusnya?<br /></li>
+                            </ul>
+                            <p>Contoh informasi yang harus dikumpulkan :</p>
+                            <ul style="text-align: left;">
+                                <li>Detail perusahaan, pegawai, dan alamat email</li>
+                                <li>Relasi dengan perusahaan lain</li>
+                                <li>Detail project yang melibatkan perusahaan lain</li>
+                                <li>Website berita relasi perusahaan</li>
+                                <li>Paten dan merek dagang</li>
+                                <li>Tanggal penting terkait project baru</li>
+                            </ul>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <p><b>Nmap</b><br /></p>
+                    <p><span>&nbsp;&nbsp; &nbsp;</span>nmap [Scan Type(s)] [Options] {target specification}<br /></p>
+                    <pre><br /></pre>
+                    <p><br /></p>
+                    <p><br /></p>
+                    <p><br /></p>
+                    <p><br /></p>
 
                     <!-- ----------------------------------------------# DIGANTI MENU #---------------------------------------------- -->
                 </main>
@@ -322,14 +460,14 @@
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     <!-- ----------------------------------------------- DIGANTI PREV NEXT ----------------------------------------------- -->
-                    <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                    <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter"
                         aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
 
 
-                    <a rel="next" href="inf.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../03-ctf/index.html" class="mobile-nav-chapters next"
                         title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -342,12 +480,12 @@
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             <!-- ----------------------------------------------- DIGANTI PREV NEXT 2 ----------------------------------------------- -->
-            <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter"
+            <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter"
                 aria-label="Previous chapter" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a rel="next" href="inf.html" class="nav-chapters next" title="Next chapter"
+            <a rel="next" href="../03-ctf/index.html" class="nav-chapters next" title="Next chapter"
                 aria-label="Next chapter" aria-keyshortcuts="Right">
                 <i class="fa fa-angle-right"></i>
             </a>
