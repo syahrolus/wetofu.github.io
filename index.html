@@ -1,409 +1,238 @@
-<!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js navy">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>Wetofu</title>
-
-
-
-
-    <!-- Custom HTML head -->
-
-
-
-    <!-- <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta name="description" content="Nightmare: an intro to binary exploitation / reverse engineering course based around CTF challenges.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff" /> -->
-
-
-    <link rel="icon" href="favicon.svg">
-
-
-    <link rel="shortcut icon" href="favicon.png">
-
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/chrome.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-
-    <link rel="stylesheet" href="fonts/fonts.css">
-
-
-    <!-- Highlight.js Stylesheets -->
-    <link rel="stylesheet" href="highlight.css">
-    <link rel="stylesheet" href="tomorrow-night.css">
-    <link rel="stylesheet" href="ayu-highlight.css">
-
-    <!-- Custom theme stylesheets -->
-
-
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel</title>
 </head>
 
 <body>
-    <!-- Provide site root to javascript -->
-    <script type="text/javascript">
-        var path_to_root = "";
-        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
-    </script>
-
-    <!-- Work around some values being stored in localStorage wrapped in quotes -->
-    <script type="text/javascript">
-        try {
-            var theme = localStorage.getItem('mdbook-theme');
-            var sidebar = localStorage.getItem('mdbook-sidebar');
-
-            if (theme.startsWith('"') && theme.endsWith('"')) {
-                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-            }
-
-            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-            }
-        } catch (e) {}
-    </script>
-
-    <!-- Set the theme before any content is loaded, prevents flash -->
-    <script type="text/javascript">
-        var theme;
-        try {
-            theme = localStorage.getItem('mdbook-theme');
-        } catch (e) {}
-        if (theme === null || theme === undefined) {
-            theme = default_theme;
-        }
-        var html = document.querySelector('html');
-        html.classList.remove('no-js')
-        html.classList.remove('navy')
-        html.classList.add(theme);
-        html.classList.add('js');
-    </script>
-
-    <!-- Hide / unhide sidebar before it is displayed -->
-    <script type="text/javascript">
-        var html = document.querySelector('html');
-        var sidebar = 'hidden';
-        if (document.body.clientWidth >= 1080) {
-            try {
-                sidebar = localStorage.getItem('mdbook-sidebar');
-            } catch (e) {}
-            sidebar = sidebar || 'visible';
-        }
-        html.classList.remove('sidebar-visible');
-        html.classList.add("sidebar-" + sidebar);
-    </script>
-
-    <!-- ---------------------------------------- NAV ---------------------------------------- -->
-
-    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-        <div class="sidebar-scrollbox">
-            <ol class="chapter">
-                <!-- -------------------- KENALAN -------------------- -->
-                <li class="chapter-item expanded affix "><a href="index.html"><strong aria-hidden="true">Kenalan</strong></a></li>
-                <!-- -------------------- KULIAH -------------------- -->
-                <li class="chapter-item expanded ">
-                    <a href="00-intro/index.html">
-                        <strong aria-hidden="true">1. Mata Kuliah </strong>
-                    </a>
-                </li>
-                <li>
-                    <ol class="section">
-                        <li class="chapter-item expanded "><a href="00-intro/inf.html"><strong
-                                    aria-hidden="true">1.1.</strong>
-                                Informatika </a></li>
-                        <li class="chapter-item expanded "><a href="00-intro/kimia.html"><strong
-                                    aria-hidden="true">1.2.</strong> Kimia</a>
-                        </li>
-                        <!-- <li>
-                            <ol class="section">
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/pico18_strings/index.html"><strong
-                                            aria-hidden="true">1.6.1.</strong> Pico'18: Strings</a></li>
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/helithumper_re/index.html"><strong
-                                            aria-hidden="true">1.6.2.</strong> Helithumper RE</a></li>
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/csaw19_beleaf/index.html"><strong
-                                            aria-hidden="true">1.6.3.</strong> CSAW'19: Beleaf</a></li>
-                            </ol>
-                        </li> -->
-                    </ol>
-                </li>
-                <!-- -------------------- CYBER SECURITY -------------------- -->
-                <li class="chapter-item expanded ">
-                    <a href="02-cybersec/index.html">
-                        <strong aria-hidden="true">2. Cyber Security </strong>
-                    </a>
-                </li>
-                <li>
-                    <ol class="section">
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.01.</strong> Konsep
-                            TCP/IP </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.02.</strong> IPv6
-                        </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.03.</strong> Routing
-                        </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.04.</strong> Network
-                            Programming </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.05.</strong> Persiapan Hacking
-                        </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true"><a
-                                    href="02-cybersec/footprinting.html">2.06. Footprinting</strong> </a></li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.06.</strong> Sniffing </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.06.</strong> Spoffing </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.07.</strong> Hacking Wireless
-                        </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.08.</strong> Attack
-                            password </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.09.</strong> Attack
-                            database SQL </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.10.</strong> DNS &
-                            Deface WEB </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.11.</strong> Attack
-                            File Sharing </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.12.</strong>
-                            Vulnerability Analysis </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.13.</strong> Dasar
-                            Pengamanan Server </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.14.</strong>
-                            Firewall </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.15.</strong> VPN
-                        </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.16.</strong> Web
-                            Application Firewall </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.17.</strong>
-                            Pertahanan Host </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.18.</strong> Basic
-                            Data Security </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">2.19.</strong>
-                            Forensic </li>
-
-                        <!-- <li>
-                            <ol class="section">
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/pico18_strings/index.html"><strong
-                                            aria-hidden="true">1.6.1.</strong> Pico'18: Strings</a></li>
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/helithumper_re/index.html"><strong
-                                            aria-hidden="true">1.6.2.</strong> Helithumper RE</a></li>
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/csaw19_beleaf/index.html"><strong
-                                            aria-hidden="true">1.6.3.</strong> CSAW'19: Beleaf</a></li>
-                            </ol>
-                        </li> -->
-                    </ol>
-                </li>
-                <!-- -------------------- CTF -------------------- -->
-                <li class="chapter-item expanded "><a href="03-ctf/index.html"><strong aria-hidden="true">3.
-                            Capture The Flag </strong></a></li>
-                <li>
-                    <ol class="section">
-                        <li class="chapter-item expanded "><a href="03-ctf/binex.html"><strong
-                                    aria-hidden="true">3.1.</strong> Binary Exploitation </a></li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">3.2.</strong>
-                            Cryptography </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">3.3.</strong> Reverse
-                            Engineering </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">3.4.</strong> Web
-                        </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">3.5.</strong> Forensic
-                        </li>
-                        <li class="chapter-item expanded "><strong aria-hidden="true">3.6.</strong>
-                            Miscellaneous </li>
-                        <!-- <li>
-                            <ol class="section">
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/pico18_strings/index.html"><strong
-                                            aria-hidden="true">1.6.1.</strong> Pico'18: Strings</a></li>
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/helithumper_re/index.html"><strong
-                                            aria-hidden="true">1.6.2.</strong> Helithumper RE</a></li>
-                                <li class="chapter-item expanded "><a
-                                        href="03-beginner_re/csaw19_beleaf/index.html"><strong
-                                            aria-hidden="true">1.6.3.</strong> CSAW'19: Beleaf</a></li>
-                            </ol>
-                        </li> -->
-                    </ol>
-                </li>
-                <!-- -------------------- Akhir -------------------- -->
-            </ol>
+    <div class="wrapper">
+        <div class="search-input">
+            <a href="" target="_blank" hidden></a>
+            <input type="text" placeholder="Type to search..">
+            <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+            </div>
+            <div class="icon"><i class="fas fa-search"></i></div>
         </div>
-        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-    </nav>
-    <!-- ---------------------------------------# NAV #--------------------------------------- -->
-    <!-- ------------------------------------- Top ------------------------------------- -->
-
-    <div id="page-wrapper" class="page-wrapper">
-
-        <div class="page">
-
-            <div id="menu-bar-hover-placeholder"></div>
-            <div id="menu-bar" class="menu-bar sticky bordered">
-                <div class="left-buttons">
-                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
-                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
-                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                        <i class="fa fa-paint-brush"></i>
-                    </button>
-                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                        <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
-                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                    </ul>
-
-                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
-                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
-                        aria-controls="searchbar">
-                        <i class="fa fa-search"></i>
-                    </button>
-
-                </div>
-
-                <h1 class="menu-title">WeTofu</h1>
-
-                <div class="right-buttons">
-                    <a href="print.html" title="Print this book" aria-label="Print this book">
-                        <i id="print-button" class="fa fa-print"></i>
-                    </a>
-
-                    <a href="https://github.com/syahrolus" title="Git repository" aria-label="Git repository">
-                        <i id="git-repository-button" class="fa fa-github"></i>
-                    </a>
-
-                </div>
-            </div>
-
-
-            <div id="search-wrapper" class="hidden">
-                <form id="searchbar-outer" class="searchbar-outer">
-                    <input type="search" name="search" id="searchbar" name="searchbar"
-                        placeholder="Search this book ..." aria-controls="searchresults-outer"
-                        aria-describedby="searchresults-header">
-                </form>
-                <div id="searchresults-outer" class="searchresults-outer hidden">
-                    <div id="searchresults-header" class="searchresults-header"></div>
-                    <ul id="searchresults">
-                    </ul>
-                </div>
-            </div>
-
-
-            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-            <script type="text/javascript">
-                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
-                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                });
-            </script>
-
-
-            <div id="content" class="content">
-                <!-- ------------------------------------# Top #------------------------------------ -->
-                <!-- ------------------------------------- Main ------------------------------------- -->
-                <main>
-                    <h1><a class="header" href="#wetofu" id="wetofu">WeTofu</a></h1>
-                    <h3><a class="header" href="#kont" id="kont">Kontributor :</a></h3>
-                    <ol>
-                        <li><a href="https://github.com/syahrolus" target="_blank" style="text-decoration: none;">Muhammad Syahrul Aulia</a></li>
-                        <li>Lutfi Lubihanto</li>
-                    </ol>
-                    <br>
-                    <hr />
-                    <br>
-                    <h4>Berbagi mulai dari : </h4>
-                    <h3 id="1-materi-kuliah-">1. Materi Kuliah :</h3>
-                    <ul>
-                        <li><b><a href="00-intro/inf.html">Informatika</a></b></li>
-                    </ul>
-                    <ul>
-                        <li><b><a href="00-intro/kimia.html">Kimia</a></b></li>
-                    </ul>
-                    <ul>
-                        <li>dan lain-lain</li>
-                    </ul>
-                    <h3 id="2-bebas-">2. Bebas :</h3>
-                    <ul>
-                        <li><b><a href="02-cybersec/index.html">Cyber Security</a></b></li>
-                    </ul>
-                    <ul>
-                        <li><b><a href="03-ctf/index.html">CTF</a></b></li>
-                    </ul>
-                    <br />
-                    <br />
-                    <p>website design from <a href="https://guyinatuxedo.github.io" target="_blank">guyinatuxedo.github.io</a></p>
-                </main>
-
-                <!-- ------------------------------------# Main #------------------------------------ -->
-
-                <nav class="nav-wrapper" aria-label="Page navigation">
-                    <!-- Mobile navigation buttons -->
-
-
-
-                    <a rel="next" href="00-intro/index.html" class="mobile-nav-chapters next" title="Next chapter"
-                        aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-
-
-                    <div style="clear: both"></div>
-                </nav>
-            </div>
-        </div>
-
-        <nav class="nav-wide-wrapper" aria-label="Page navigation">
-
-
-
-            <a rel="next" href="00-intro/index.html" class="nav-chapters next" title="Next chapter"
-                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <i class="fa fa-angle-right"></i>
-            </a>
-
-        </nav>
-
     </div>
 
+    <div id="myBtnContainer">
+        <button class="btn2 active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn2" onclick="filterSelection('nature')"> Nature</button>
+        <button class="btn2" onclick="filterSelection('adventure')"> Adventure</button>
+        <button class="btn2" onclick="filterSelection('culture')"> Culture</button>
+        <button class="btn2" onclick="filterSelection('photography')"> Photography</button>
+    </div>
 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 filterDiv photography" style="margin-bottom: 20px;">
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="pulau-padar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 id="destinasi" class="card-title text-center">Kerjasan</h3>
+                        <p class="card-text">
+                        <ul>
+                            <li id="kota">Kudus, Jawa Tengah</li>
+                            <li>Photography</li>
+                            <li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-success">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 filterDiv nature" style="margin-bottom: 20px;">
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="pulau-padar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 id="destinasi" class="card-title text-center">Gebog</h3>
+                        <p class="card-text">
+                        <ul>
+                            <li id="kota">Kudus, Jawa Tengah</li>
+                            <li>Nature</li>
+                            <li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-success">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 filterDiv adventure" style="margin-bottom: 20px;">
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="pulau-padar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 id="destinasi" class="card-title  text-center">Jekulo</h3>
+                        <p class="card-text">
+                        <ul>
+                            <li id="kota">Kudus, Jawa Tengah</li>
+                            <li>Adventure</li>
+                            <li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-success">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 filterDiv culture" style="margin-bottom: 20px;">
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="pulau-padar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 id="destinasi" class="card-title  text-center">Colo</h3>
+                        <p class="card-text">
+                        <ul>
+                            <li id="kota">Kudus, Jawa Tengah</li>
+                            <li>Culture</li>
+                            <li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-success">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 filterDiv photography" style="margin-bottom: 20px;">
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="pulau-padar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 id="destinasi" class="card-title  text-center">GOR Kudus</h3>
+                        <p class="card-text">
+                        <ul>
+                            <li id="kota">Kudus, Jawa Tengah</li>
+                            <li>Photography</li>
+                            <li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-success">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 filterDiv adventure" style="margin-bottom: 20px;">
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="pulau-padar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 id="destinasi" class="card-title  text-center">Natas Angin</h3>
+                        <p class="card-text">
+                        <ul>
+                            <li id="kota">Kudus, Jawa Tengah</li>
+                            <li>Adventure</li>
+                            <li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-success">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 filterDiv culture" style="margin-bottom: 20px;">
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="pulau-padar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 id="destinasi" class="card-title  text-center">Masjid Menara</h3>
+                        <p class="card-text">
+                        <ul>
+                            <li id="kota">Kudus, Jawa Tengah</li>
+                            <li>Culture</li>
+                            <li>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-success">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <br><br><br><br><br><br>
 
+    <script src="javascript.js"></script>
+    <script src="script.js"></script>
 
-
-
-
-    <script type="text/javascript">
-        window.playground_copyable = true;
-    </script>
-
-
-
-
-
-    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-
-
-    <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-    <script src="book.js" type="text/javascript" charset="utf-8"></script>
-
-    <!-- Custom JS scripts -->
-
-
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
 
 </body>
 
