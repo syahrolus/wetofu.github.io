@@ -24,7 +24,8 @@ inputBox.onkeyup = (e) => {
         });
         emptyArray = emptyArray.map((data) => {
             // passing return data inside li tag
-            return data = '<li><a href="' + data.replace(regex, '').replace(/\s/g, '-') + ".html" + '">' + data + '</a></li>';
+            // return data = '<li><a href="' + data.replace(regex, '').replace(/\s/g, '-') + ".html" + '" style="color: black;text-decoration: none;">' + data + '</a></li>';
+            return data = '<li><a href="#" style="color: black;text-decoration: none;">' + data + '</a></li>';
         });
         searchWrapper.classList.add("active"); //show autocomplete box
         showSuggestions(emptyArray);
